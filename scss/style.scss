@@ -36,9 +36,6 @@ a {
     max-width: 1110px;
     width: 90%;
 }
-.header {
-	height: 100vh;
-}
 .section {
 	&__header {
 		background-color: #3e3b3b;
@@ -48,8 +45,9 @@ a {
 		background-position: center;
 		padding: 170px 0 135px 0;
 		text-align: center;
+		height: 90vh;
 		input {
-			width: 38.5%;
+			width: 400px;
 			padding: 14px 240px 15px 15px;
 			outline: none;
 			border: none;
@@ -65,7 +63,7 @@ a {
 			background-color: $primary-color;
 			position: absolute;
 			z-index: 2;
-			right: 215px;
+			right: 1px;
 			top: 1px;
 			color: white;
 			background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyLjk2NiA1Mi45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUyLjk2NiA1Mi45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTUxLjcwNCw1MS4yNzNMMzYuODQ1LDM1LjgyYzMuNzktMy44MDEsNi4xMzgtOS4wNDEsNi4xMzgtMTQuODJjMC0xMS41OC05LjQyLTIxLTIxLTIxcy0yMSw5LjQyLTIxLDIxczkuNDIsMjEsMjEsMjEgIGM1LjA4MywwLDkuNzQ4LTEuODE3LDEzLjM4NC00LjgzMmwxNC44OTUsMTUuNDkxYzAuMTk2LDAuMjA1LDAuNDU4LDAuMzA3LDAuNzIxLDAuMzA3YzAuMjUsMCwwLjQ5OS0wLjA5MywwLjY5My0wLjI3OSAgQzUyLjA3NCw1Mi4zMDQsNTIuMDg2LDUxLjY3MSw1MS43MDQsNTEuMjczeiBNMjEuOTgzLDQwYy0xMC40NzcsMC0xOS04LjUyMy0xOS0xOXM4LjUyMy0xOSwxOS0xOXMxOSw4LjUyMywxOSwxOSAgUzMyLjQ1OSw0MCwyMS45ODMsNDB6IiBmaWxsPSIjRkZGRkZGIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
@@ -84,7 +82,8 @@ a {
 	}
 	&__nav {
 			background-color: $primary-color;
-			padding: 20px 0;
+			padding: 25px 0;
+			height: 10vh;
 	}
 	&__main-1 {
 		background-image: url(../img/img8.jpg);
@@ -132,6 +131,8 @@ a {
 	text-transform: uppercase;
 	color: white;
 	margin: 0;
+	max-height: 50px;
+	overflow: hidden;
 	&__section-5 {
 		font-family: 'aleo', serif;
 		color: white;
@@ -151,6 +152,7 @@ a {
 .form {
 	margin: 0 auto;
 	position: relative;
+	display: inline-block;
 }
 .scroll {
 	&__link {
@@ -249,8 +251,8 @@ a {
 	}
 	&--100 {
 		position: absolute;
-		right:17.5%;
-		bottom: 90%;
+		left:50%;
+		transform: translate(-52%, -120%);
 	}
 }
 .text {
@@ -344,6 +346,14 @@ a {
 		font-weight: 700;
 		text-transform: uppercase;
 		margin: 0;
+		a {
+			@include transition;
+			&:hover,
+			&:focus,
+			&:active {
+				opacity: .5;
+			}
+		}
 	}
 	&__sub-title {
 		margin: 0;
